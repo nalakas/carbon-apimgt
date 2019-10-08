@@ -36,13 +36,15 @@ const styles = theme => ({
     },
     contentWrapper: {
         maxWidth: theme.custom.contentAreaWidth,
-        paddingLeft: theme.spacing.unit * 2,
+        paddingLeft: theme.spacing.unit * 2.3,
         paddingTop: theme.spacing.unig,
         marginTop: theme.spacing.unit * 2,
+        align:center
     },
     textField: {
         marginTop: 0,
-        width: '88%',
+        marginLeft: 0,
+        width: '99%',
     },
 });
 

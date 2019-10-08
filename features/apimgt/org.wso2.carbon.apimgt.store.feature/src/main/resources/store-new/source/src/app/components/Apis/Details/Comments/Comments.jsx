@@ -35,11 +35,13 @@ const styles = theme => ({
         alignItems: 'center',
         paddingTop: theme.spacing.unit * 2,
         paddingBottom: theme.spacing.unit * 2,
+        paddingLeft:theme.spacing.unit * 2,
     },
     contentWrapper: {
         maxWidth: theme.custom.contentAreaWidth,
-        paddingLeft: theme.spacing.unit * 2,
-        paddingTop: theme.spacing.unig,
+        paddingLeft: theme.spacing.unit * 1,
+        paddingTop: theme.spacing.unit * 1,
+        alignItems: "center",
     },
     titleSub: {
         cursor: 'pointer',
@@ -47,6 +49,7 @@ const styles = theme => ({
     link: {
         color: theme.palette.getContrastText(theme.palette.background.default),
         cursor: 'pointer',
+        alignItems: "center",
     },
     verticalSpace: {
         marginTop: theme.spacing.unit * 0.2,
@@ -210,12 +213,6 @@ class Comments extends Component {
                     <div className={classes.contentWrapper}>
                         {!showLatest && (
                             <div className={classes.root}>
-                                <Icon
-                                    onClick={this.handleExpandClick}
-                                    aria-expanded={expanded}
-                                >
-                                    arrow_drop_down_circle
-                                </Icon>
                                 <Typography
                                     onClick={this.handleExpandClick}
                                     variant='h4'
@@ -225,12 +222,6 @@ class Comments extends Component {
                                 </Typography>
                             </div>
                         )}
-                        <Comment
-                            comments={comments}
-                            apiId={api.id}
-                            commentsUpdate={this.updateCommentList}
-                            allComments={allComments}
-                        />
                         {!showLatest && (
                             <CommentAdd
                                 apiId={api.id}
@@ -240,6 +231,12 @@ class Comments extends Component {
                                 cancelButton
                             />
                         )}
+                        <Comment
+                            comments={comments}
+                            apiId={api.id}
+                            commentsUpdate={this.updateCommentList}
+                            allComments={allComments}
+                         />
 
                         {startCommentsToDisplay !== 0 && (
                             <div className={classes.contentWrapper}>

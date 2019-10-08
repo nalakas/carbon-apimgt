@@ -175,6 +175,7 @@ const styles = theme => ({
         alignItems: 'center',
         textDecoration: 'none',
         display: 'flex',
+        paddingLeft: 2,
     },
     ratingSummery: {
         alignItems: 'center',
@@ -194,6 +195,7 @@ const styles = theme => ({
     buttonOverviewText: {
         display: 'inline-block',
         paddingTop: 3,
+        paddingLeft: theme.spacing.unit * 1.01,
     },
     rootx: {
         height: 180,
